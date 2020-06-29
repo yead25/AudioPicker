@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroun"
+    tools:context=".AudioPicker">
+
+
+
+        <FrameLayout
+            android:background="@android:color/white"
+            android:id="@+id/ad_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ad_holder">
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Refresh Ad"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp" />
+            <Button
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Close Ad"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="right"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_alignParentBottom="true"
+
+            android:background="@android:color/transparent"
+            android:id="@+id/audio_picker_RecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/buttons"
+            android:layout_marginBottom="20dp"/>
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/audio_fragment"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/buttons"
+        android:layout_height="match_parent"/>
+
+
+
+
+</RelativeLayout>
